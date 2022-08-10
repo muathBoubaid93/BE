@@ -103,15 +103,15 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 		}
 	}
 	
-	if(!headerApiKey)
-	{
-		res.send(handellError(1013, errorCodes[1021]));
-	}
+	// if(!headerApiKey)
+	// {
+	// 	res.send(handellError(1013, errorCodes[1021]));
+	// }
 
-	if(headerApiKey != config?.API_KEY)
-	{
-		res.send(handellError(1013, errorCodes[1021]));
-	}
+	// if(headerApiKey != config?.API_KEY)
+	// {
+	// 	res.send(handellError(1013, errorCodes[1021]));
+	// }
 
 	if(!hasValidFiles)
 	{
