@@ -1,0 +1,16 @@
+{
+    "common_unknown": "غير معروف",
+    "common_month_jan": "يناير",
+    "common_month_feb": "فبراير",
+    "common_month_mar": "مارس",
+    "common_month_apr": "ابريل",
+    "common_month_may": "مايو",
+    "common_month_jun": "يونيو",
+    "common_month_jul": "يوليو",
+    "common_month_aug": "أغسطس",
+    "common_month_sep": "سبتمبر",
+    "common_month_oct": "اكتوبر",
+    "common_month_nov": "نوفمبر",
+    "common_month_dec": "ديسمبر",
+    "common_timestampAt": "الساعة"
+}

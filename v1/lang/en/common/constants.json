@@ -1,0 +1,16 @@
+{
+    "common_unknown": "Unknown",
+    "common_month_jan": "Jan",
+    "common_month_feb": "Feb",
+    "common_month_mar": "Mar",
+    "common_month_apr": "Apr",
+    "common_month_may": "May",
+    "common_month_jun": "Jun",
+    "common_month_jul": "Jul",
+    "common_month_aug": "Aug",
+    "common_month_sep": "Sep",
+    "common_month_oct": "Oct",
+    "common_month_nov": "Nov",
+    "common_month_dec": "Dec",
+    "common_timestampAt": "at"
+}

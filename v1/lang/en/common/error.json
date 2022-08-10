@@ -1,0 +1,25 @@
+{
+    "1000": "Invalid or missing header version",
+    "1001": "This app version is no longer supported",
+    "1002": "Invalid or missing language code",
+    "1003": "Invalid Service Name",
+    "1004": "Invalid URI",
+    "1005": "Uknown Error",
+    "1006": "Invalid Method Name",
+    "1007": "Invalid URI Structure",
+    "1008": "Failed to connect to the remote server",
+    "1009": "Failed to upload image",
+    "1010": "Session has expired",
+    "1011": "We are unable to process this request due to a database error",
+    "1012": "Invalid or missing i18n data",
+    "1013": "Invalid file type. Only PNG, JPG, GIF and PDF are allowed",
+    "1014": "File size has exceeded the limit",
+    "1015": "File upload failed due to an internal error",
+    "1016": "Value(s) provided contain(s) illegal characters",
+    "1017": "We have encountered an error while communicating with remote server",
+    "1018": "You are not allowed to perform this action",
+    "1019": "Invalid or missing endpoint",
+    "1020": "Failed to execute a proccess due to an validation error"
+
+   
+}
