@@ -112,6 +112,14 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 	{
 		res.send(handellError(1021, errorCodes[1021]));
 	}
+	else if(headerAppVersion.toString() != '1.0')
+	{
+		res.send(handellError(1000, errorCodes[1000]));
+	}
+	else if(headerAppVersion.toString() != 'web')
+	{
+		res.send(handellError(1019, errorCodes[1019]));
+	}
 	else if(!hasValidFiles)
 	{
 		clearTempFile(filesUploaded);
