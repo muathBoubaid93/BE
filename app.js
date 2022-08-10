@@ -8,6 +8,8 @@ const fs = require('fs');
 const requestIP = require('request-ip');
 const is_ip_private = require('private-ip');
 const useragent = require('express-useragent');
+const cors = require("cors");
+
 
 app.use(bodyParser.json({limit: config.REQUEST_PAYLOAD_SIZE + 'mb'}));
 app.use(bodyParser.urlencoded({limit: config.REQUEST_PAYLOAD_SIZE + 'mb',
@@ -15,6 +17,7 @@ app.use(bodyParser.urlencoded({limit: config.REQUEST_PAYLOAD_SIZE + 'mb',
 							   parameterLimit: config.REQUEST_PAYLOAD_SIZE*1000}));
 app.use(express.static('public'));
 app.use(useragent.express());
+app.use(cors());
 
 var uniqueUploadID = Date.now() + "_" + Math.floor(Math.random() * 10000);
 
