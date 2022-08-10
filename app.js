@@ -116,7 +116,7 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 		console.log("LKKK");
 		res.send(handellError(1000, errorCodes[1000]));
 	}
-	else if(headerAppVersion.toString() !== 'web')
+	else if(headerEndpoint.toString() !== 'web')
 	{
 		res.send(handellError(1019, errorCodes[1019]));
 	}
