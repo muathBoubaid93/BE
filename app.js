@@ -103,6 +103,7 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 		}
 	}
 	
+	console.log(headerAppVersion);
 
 	if(!headerApiKey)
 	{
@@ -112,11 +113,12 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 	{
 		res.send(handellError(1021, errorCodes[1021]));
 	}
-	else if(headerAppVersion.toString() != '1.0')
+	else if(headerAppVersion.toString() !== '1.0')
 	{
+		console.log("LKKK");
 		res.send(handellError(1000, errorCodes[1000]));
 	}
-	else if(headerAppVersion.toString() != 'web')
+	else if(headerAppVersion.toString() !== 'web')
 	{
 		res.send(handellError(1019, errorCodes[1019]));
 	}
