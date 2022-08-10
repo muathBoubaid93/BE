@@ -103,8 +103,6 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 		}
 	}
 	
-	console.log(headerAppVersion);
-
 	if(!headerApiKey)
 	{
 		res.send(handellError(1021, errorCodes[1021]));
@@ -113,7 +111,7 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 	{
 		res.send(handellError(1021, errorCodes[1021]));
 	}
-	else if(headerAppVersion.toString() !== '1.0')
+	else if(headerAppVersion.toString() !== '1')
 	{
 		console.log("LKKK");
 		res.send(handellError(1000, errorCodes[1000]));
