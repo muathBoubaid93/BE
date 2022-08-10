@@ -103,19 +103,16 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 		}
 	}
 	
-	console.log(config?.API_KEY)
 
 	if(!headerApiKey)
 	{
 		res.send(handellError(1021, errorCodes[1021]));
 	}
-
-	if(headerApiKey != config?.API_KEY)
+	else if(headerApiKey != config?.API_KEY)
 	{
 		res.send(handellError(1021, errorCodes[1021]));
 	}
-
-	if(!hasValidFiles)
+	else if(!hasValidFiles)
 	{
 		clearTempFile(filesUploaded);
 		res.send(handellError(1013, errorCodes[1013]));
