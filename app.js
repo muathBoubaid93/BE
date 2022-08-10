@@ -113,7 +113,6 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 	}
 	else if(headerAppVersion.toString() !== '1')
 	{
-		console.log("LKKK");
 		res.send(handellError(1000, errorCodes[1000]));
 	}
 	else if(headerEndpoint.toString() !== 'web')
@@ -157,10 +156,8 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 				{
 					var service = require('./' + path);
 
-
 					var newSession = appLocals;
 
-					
 					newSession.lang           = headerLanguage;
 					newSession.token          = headerToken;
 					newSession.request_data   = req.body;
@@ -280,6 +277,7 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 
 app.all('*', (req, res) =>
 {
+	res.setHeader('Access-Control-Allow-Origin', '*');
 	var code = 1007;
 	var msg = "Invalid URI Structure";
 	res.send(handellError(code, msg));
