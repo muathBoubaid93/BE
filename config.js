@@ -2,6 +2,8 @@ const env = require('./env.json');
 
 const dev =
 {
+
+	"API_KEY":"6712af02b880c31fc7ede1f6774f31d1ce0b02aa9a3rt",
 	
 	"DATABASE_HOST_NAME": "database-main.cmgot7ftcaew.eu-west-3.rds.amazonaws.com",
 	"DATABASE_NAME": "user",
@@ -22,6 +24,8 @@ const dev =
 
 const preprod =
 {
+	"API_KEY":"6712af02b880c31fc7ede1f6774f31d1ce0b02aa9a3rt",
+
 	"DATABASE_HOST": "database-main.cmgot7ftcaew.eu-west-3.rds.amazonaws.com",
 	"DATABASE_DATABASE": "user",
 	"DATABASE_USERNAME": "admin",
@@ -40,6 +44,8 @@ const preprod =
 
 const prod =
 {
+	"API_KEY":"6712af02b880c31fc7ede1f6774f31d1ce0b02aa9a3rt",
+
 	"DATABASE_HOST": "database-main.cmgot7ftcaew.eu-west-3.rds.amazonaws.com",
 	"DATABASE_DATABASE": "user",
 	"DATABASE_USERNAME": "admin",

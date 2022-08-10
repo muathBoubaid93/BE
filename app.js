@@ -72,8 +72,11 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 	var headerLanguage = (req.header('x-api-lang') !== undefined) ? req.header('x-api-lang') : config.DEFAULT_LANGUAGE;
 	var headerAppVersion = (req.header('x-api-version') !== undefined) ? parseFloat(req.header('x-api-version')) : 0;
 	var headerEndpoint = (req.header('x-api-endpoint') !== undefined) ? req.header('x-api-endpoint') : "";
+	var headerApiKey = (req.header('x-api-key') !== undefined) ? req.header('x-api-key') : "";
 
 	var errorLanguage = (config.SUPPORTED_LANGUAGES.includes(headerLanguage.toLowerCase())) ? headerLanguage : config.DEFAULT_LANGUAGE;
+	const isExposedRequest = (config.EXPOSED_RESPONSES?.indexOf(requestFolder + "/" + requestFile + "/" + requestMethod) !== -1)
+
 	var errorVersion = config.DEFAULT_VERSION;
 	
 	var clientIP = requestIP.getClientIp(req); 
@@ -100,6 +103,15 @@ function processRequest(requestAPIVersion, requestFolder, requestFile, requestMe
 		}
 	}
 	
+	if(!headerApiKey)
+	{
+		res.send(handellError(1013, errorCodes[1021]));
+	}
+
+	if(headerApiKey != config?.API_KEY)
+	{
+		res.send(handellError(1013, errorCodes[1021]));
+	}
 
 	if(!hasValidFiles)
 	{

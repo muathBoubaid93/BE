@@ -19,7 +19,8 @@
     "1017": "We have encountered an error while communicating with remote server",
     "1018": "You are not allowed to perform this action",
     "1019": "Invalid or missing endpoint",
-    "1020": "Failed to execute a proccess due to an validation error"
+    "1020": "Failed to execute a proccess due to an validation error",
+    "1021": "Missing or invalid API KEY"
 
    
 }
